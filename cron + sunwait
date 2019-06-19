@@ -1,0 +1,10 @@
+# m h  dom mon dow   command
+35 5 * * * /usr/local/bin/sunwait wait civil start 3.033545N 101.439362E ; pkill meteotux
+40 5 * * * /usr/local/bin/sunwait wait civil start offset +00:01:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./DayCap.sh
+55 18 * * * /usr/local/bin/sunwait wait civil end 3.033545N 101.439362E ; pkill DayCap.sh
+00 19 * * * /usr/local/bin/sunwait wait civil end offset +00:01:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./meteotux_pi_works_with_stretch_kernel_4.9 -d 60 -e 6000 &
+
+# For everyday, 5:35 a.m., wait until civil twilight start. Pkill the "meteotux_pi_works_with_stretch_kernel_4.9" operation.
+# For everyday, 5:40 a.m., wait 1 minutes after civil twilight start. Execute "DayCap.sh" from the directory called "AllSkyData". 
+# For everyday, 6:55 p.m., wait until civil twilight end. Pkill the "DayCap.sh" operation.
+# For everyday, 7:19 p.m., wait 1 minutes after civil twilight end. Execute "meteotux_pi_works_with_stretch_kernel_4.9" from the directory called "AllSkyData". With arguement: -d 60 -e 6000 &
