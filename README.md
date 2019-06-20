@@ -9,8 +9,8 @@ From AP mode to WIFI mode:
 
 'sudo systemctl stop hostapd'
 
-sudo nano /etc/dhcpcd.conf
----------------------------
+'sudo nano /etc/dhcpcd.conf'
+
 Inside dhcpcd.conf, remove/comment out the lines related to the static IP address (in my case, the last two lines in the file):
 
 #static ip_address=192.168.10.1/24
@@ -18,7 +18,7 @@ Inside dhcpcd.conf, remove/comment out the lines related to the static IP addres
 #static routers=192.168.10.1
 
 Edit the wpa_supplicant to enable WIFI connection:
-
+-
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 sudo reboot
