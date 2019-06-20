@@ -29,11 +29,11 @@ country="country code"
 
 network={
 
-ssid="xxxx"
+        ssid="xxxx"
 
-psk="xxxx"
+        psk="xxxx"
  
- id_str="xxxx"
+        id_str="xxxx"
 
 }
 
