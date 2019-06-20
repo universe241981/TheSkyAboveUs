@@ -1,3 +1,10 @@
+# Type "crontab -e" for edit cron job.
+# Type "crontab -l" to view cron job that being assigned.
+# Type "crontab -r" to delete cron job.
+##########################################################
+
+# Example of cron job associated with sunwait program:
+
 # m h  dom mon dow   command
 35 5 * * * /usr/local/bin/sunwait wait civil start 3.033545N 101.439362E ; pkill meteotux
 40 5 * * * /usr/local/bin/sunwait wait civil start offset +00:01:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./DayCap.sh
