@@ -6,7 +6,7 @@ Due to the exposure time limitation of the Pi camera v1.3 at maximum 6 seconds, 
 # Switch between AP mode and WIFI mode
 From AP mode to WIFI mode:
 ---------------------------
-sudo systemctl stop hostapd
+"sudo systemctl stop hostapd"
 
 sudo nano /etc/dhcpcd.conf
 
