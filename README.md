@@ -21,4 +21,14 @@ Edit the wpa_supplicant to enable WIFI connection:
 -
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country="country code"
+
+network={
+	ssid="xxxx"
+	psk="xxxx"
+  id_str="xxxx"
+}
+
 sudo reboot
