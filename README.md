@@ -3,7 +3,7 @@ An all sky imaging system that use Raspberry Pi(all type of RPi mainboard) and P
 
 Due to the exposure time limitation of the Pi camera v1.3 at maximum 6 seconds, such system only usable at area with relatively light polluted sky.
 
-NOTE - 2019-06-20
+[NOTE] 2019-06-20
 -
 If use Pi0W and connected to home network, the PHP can be view as normal without any problem.
 But if Remot3it was setup and view the PHP page via remot3it, Pi0W will halt from operation.
