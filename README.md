@@ -7,6 +7,7 @@ Due to the exposure time limitation of the Pi camera v1.3 at maximum 6 seconds, 
 From AP mode to WIFI mode:
 ---------------------------
 sudo systemctl stop hostapd
+
 sudo nano /etc/dhcpcd.conf
 
 Inside dhcpcd.conf, remove/comment out the lines related to the static IP address (in my case, the last two lines in the file):
