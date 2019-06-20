@@ -16,7 +16,9 @@ Inside dhcpcd.conf, remove/comment out the lines related to the static IP addres
 
 Edit the wpa_supplicant.conf to enable WIFI connection:
 -
-    sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+-
+     
+     sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
     
 Edit:
 
@@ -31,7 +33,7 @@ Edit:
         id_str="xxxx"
     }
 
-Then reboot:
+Then reboot,
 
     sudo reboot
 
@@ -45,11 +47,11 @@ At the bottom of the file, edit:
         static ip_address=192.168.10.1/24
         static routers=192.168.10.1
 
-Then:
+Then,
 
     sudo systemctl unmask hostapd
     sudo systemctl enable hostapd
 
-Then:
+Then reboot,
     
     sudo reboot
