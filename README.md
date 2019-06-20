@@ -16,8 +16,6 @@ Inside dhcpcd.conf, remove/comment out the lines related to the static IP addres
 
 Edit the wpa_supplicant.conf to enable WIFI connection:
 -
--
-     
      sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
     
 Edit:
