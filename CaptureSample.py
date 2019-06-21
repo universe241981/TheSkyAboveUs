@@ -3,7 +3,7 @@ import time
 from time import sleep
 camera = PiCamera()
 while True:
-    fname = (time.strftime("%y%b%d_%H:%M:%S"))
-    variable = "/home/pi/Documents/ZeroWGarden/Pics/" + fname + ".jpg"
+    DATE = (time.strftime("%y%m%d_%H:%M:%S"))
+    variable = "/home/aspi/AllSkyData/" + DATE + ".jpg"
     camera.capture(variable)
     sleep(5)
