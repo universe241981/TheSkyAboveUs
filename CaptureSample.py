@@ -13,6 +13,20 @@ camera.capture(variable)
 
 ---------------------------------------------------
 
+import picamera
+import time
+
+while True:
+    with picamera.PiCamera() as camera:
+        camera.resolution = camera.MAX_RESOLUTION
+        time.sleep(2) # Camera warm-up time
+        DATE = (time.strftime("%Y%m%d_%H%M%S"))
+        camera.capture("/home/aspi/AllSkyData/" + DATE + ".jpg")
+    # Capture one image a minute
+    time.sleep(30)
+
+----------------------------------------------------  
+
 from time import sleep
 from picamera import PiCamera
 from datetime import datetime
