@@ -23,7 +23,7 @@ while True:
         DATE = (time.strftime("%Y%m%d_%H%M%S"))
         camera.capture("/home/aspi/AllSkyData/" + DATE + ".jpg")
     # Capture one image a minute
-    time.sleep(30)
+    time.sleep(60)
 
 ----------------------------------------------------  
 
