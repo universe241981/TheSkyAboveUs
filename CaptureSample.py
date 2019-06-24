@@ -1,5 +1,7 @@
 #For Installation of Picamera for enable python control of Pi camera 
 #https://picamera.readthedocs.io/en/release-1.13/install.html
+# $ sudo apt-get update
+# $ sudo apt-get install python-picamera python3-picamera
 
 from picamera import PiCamera
 import time
