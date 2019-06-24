@@ -10,15 +10,14 @@ sleep(2)
 DATE = (time.strftime("%Y%m%d_%H%M%S"))
 variable = "/home/aspi/AllSkyData/" + DATE + ".jpg"
 camera.capture(variable)
-
-
+---------------------------------------------------
 from time import sleep
 from picamera import PiCamera
 from datetime import datetime
 
 camera = PiCamera()
-camera.start_preview()
-wait()
-for filename in camera.capture_continuous('img{timestamp:%Y-%m-%d-%H-%M}.jpg'):
-    print('Captured %s' % filename)
-    wait()
+
+for filename in camera.capture_continuous('{timestamp:%Y%m%d-%H%M%S}.jpg'):
+    camera.capture_continuous('/home/aspi/AllSkyData/{timestamp:%Y%m%d-%H%M%S}.jpg')
+    sleep(30)
+    
