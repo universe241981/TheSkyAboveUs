@@ -29,6 +29,33 @@ while True:
 
 ----------------------------------------------------  
 
+from picamera import PiCamera
+from fractions import Fraction
+import datetime
+from time import strftime
+import datetime, time
+from time import strftime
+
+date_time = ''
+date_time = strftime('%Y', time.localtime())
+date_time = date_time + strftime('%m', time.localtime())
+date_time = date_time + strftime('%d_', time.localtime())
+date_time = date_time + strftime('%H:%M:%S', time.localtime())
+camera = PiCamera(resolution=(2592, 1944))
+camera.sensor_mode = 2
+camera.exposure_mode = 'auto'  # off, auto, night, nightpreview, backlight, spotlight, sports, snow, beach, verylong, fixedfps, antishake and fireworks
+camera.awb_mode = 'auto'   # off, auto, sunlight, cloudy, shade, tungsten, fluorescent, incandescent, flash, and horizon
+camera.shutter_speed = 0
+camera.iso = 0
+camera.brightness = 80  # 0 to 100
+camera.contrast = 80  # 0 to 100
+camera.start_preview()
+time.sleep(60)
+camera.capture(date_time +'.jpg')
+camera.stop_preview()
+
+--------------------------------------------------
+
 from time import sleep
 from picamera import PiCamera
 from datetime import datetime
