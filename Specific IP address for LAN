@@ -1,0 +1,15 @@
+Just for the use of Pi0W
+
+sudo nano /etc/network/interfaces
+
+allow-hotplug wlan0
+iface wlan0 inet static
+        address 10.1.1.31
+        netmask 255.255.255.0
+        gateway 10.1.1.1
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+*Remember to configure wpa_supplicant.conf to be able to connect to home WIFI
+
+sudo systemctl disable dhcpcd
+sudo systemctl enable networking
+sudo reboot
