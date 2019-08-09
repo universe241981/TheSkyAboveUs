@@ -4,7 +4,7 @@
 </head>
 <body>
     <?php
-    exec('/usr/bin/python2.7 /aspi/AllSkyData/DayCap.py');
+    exec('/usr/bin/python2.7 home/aspi/AllSkyData/DayCap.py');
     ?>
 </body>
 </html>
