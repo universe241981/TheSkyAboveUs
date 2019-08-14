@@ -6,12 +6,13 @@
 # Example of cron job associated with sunwait program:
 
 # m h  dom mon dow   command
-40 05 * * * /usr/local/bin/sunwait wait civil start 3.033545N 101.439362E ; pkill meteotux
-45 05 * * * /usr/local/bin/sunwait wait civil start offset +00:01:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./DayCap.sh
-00 19 * * * /usr/local/bin/sunwait wait civil end 3.033545N 101.439362E ; pkill DayCap.sh
-05 19 * * * /usr/local/bin/sunwait wait civil end offset +00:01:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./meteotux_pi_works_with_stretch_kernel_4.9 -d 60 -e 6000 &
+25 05 * * * /usr/local/bin/sunwait wait nautical start offset +00:23:00 3.033545N 101.439362E ; pkill meteotux
+30 05 * * * /usr/local/bin/sunwait wait nautical start offset +00:24:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./DayCap.sh
+00 19 * * * /usr/local/bin/sunwait wait nautical end offset +00:23:00 3.033545N 101.439362E ; pkill DayCap.sh
+05 19 * * * /usr/local/bin/sunwait wait nautical end offset +00:22:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./meteotux_pi_works_with_stretch_kernel_4.9 -d 60 -e 6000 &
 
-# For everyday, 5:35 a.m., wait until civil twilight start. Pkill the "meteotux_pi_works_with_stretch_kernel_4.9" operation.
-# For everyday, 5:40 a.m., wait 1 minutes after civil twilight start. Execute "DayCap.sh" from the directory called "AllSkyData". 
-# For everyday, 6:55 p.m., wait until civil twilight end. Pkill the "DayCap.sh" operation.
-# For everyday, 7:00 p.m., wait 1 minutes after civil twilight end. Execute "meteotux_pi_works_with_stretch_kernel_4.9" from the directory called "AllSkyData". With arguement: -d 60 -e 6000 &
+# For everyday, 5:25 a.m., wait until 23 minutes after nautical twilight start. Pkill the "meteotux_pi_works_with_stretch_kernel_4.9" operation.
+# For everyday, 5:30 a.m., wait until 24 minutes after nautical twilight start. Execute "DayCap.sh" from the directory called "AllSkyData". 
+# For everyday, 7:00 p.m., wait until 24 minutes before nautical twilight end. Pkill the "DayCap.sh" operation.
+# For everyday, 7:05 p.m., wait until 23 minutes before nautical twilight end. Execute "meteotux_pi_works_with_stretch_kernel_4.9" from the directory called "AllSkyData". With arguement: -d 60 -e 6000 &
+# Offset positive (+ve) towards noon.
