@@ -6,10 +6,10 @@
 # Example of cron job associated with sunwait program:
 
 # m h  dom mon dow   command
-25 05 * * * /usr/local/bin/sunwait wait nautical start offset +00:23:00 3.033545N 101.439362E ; pkill meteotux
-30 05 * * * /usr/local/bin/sunwait wait nautical start offset +00:24:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./DayCap.sh
-00 19 * * * /usr/local/bin/sunwait wait nautical end offset +00:24:00 3.033545N 101.439362E ; pkill DayCap.sh
-05 19 * * * /usr/local/bin/sunwait wait nautical end offset +00:23:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./meteotux_pi_works_with_stretch_kernel_4.9 -d 60 -e 6000 &
+25 05 * * * /usr/local/bin/sunwait wait nautical start offset +00:21:00 3.033545N 101.439362E ; pkill meteotux
+30 05 * * * /usr/local/bin/sunwait wait nautical start offset +00:22:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./DayCap.sh
+00 19 * * * /usr/local/bin/sunwait wait nautical end offset +00:22:00 3.033545N 101.439362E ; pkill DayCap.sh
+05 19 * * * /usr/local/bin/sunwait wait nautical end offset +00:21:00 3.033545N 101.439362E ; cd /home/aspi/AllSkyData ; ./meteotux_pi_works_with_stretch_kernel_4.9 -d 60 -e 6000 &
 
 # For everyday, 5:25 a.m., wait until 23 minutes after nautical twilight start. Pkill the "meteotux_pi_works_with_stretch_kernel_4.9" operation.
 # For everyday, 5:30 a.m., wait until 24 minutes after nautical twilight start. Execute "DayCap.sh" from the directory called "AllSkyData". 
