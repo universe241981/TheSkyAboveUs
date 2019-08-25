@@ -9,6 +9,15 @@ $page = $_SERVER['PHP_SELF'];
     <body bgcolor=black>
         <center><font size=8 color=white>The Sky Above Us</font><br><font size=5 color=white>Location = Somewhere On Earth | Owner = W.C.Observatory | </font>
         <font size=5 color=white>
+        <center><font size=5 color=white>Date and Time : </font>
+                                                                 
+        <?php
+    
+            $today = date(d-M-Y H:i:s");
+            echo $today;
+            
+            ?>
+            
         <?php
 
             $files = glob('AllSkyData/*.*');
