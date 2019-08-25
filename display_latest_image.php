@@ -8,7 +8,6 @@ $page = $_SERVER['PHP_SELF'];
 </head>
     <body bgcolor=black>
         <center><font size=8 color=white>The Sky Above Us</font><br><font size=5 color=white>Location = Somewhere On Earth | Owner = W.C.Observatory | </font>
-        
         <br><font size=5 color=white>
                                                                  
         <?php
@@ -16,7 +15,7 @@ $page = $_SERVER['PHP_SELF'];
             $today = date(d-M-Y H:i:s");
             echo $today;
             
-            ?>
+        ?>
             
         </font>
             
