@@ -12,7 +12,7 @@ $page = $_SERVER['PHP_SELF'];
                                                                  
         <?php
     
-            $today = date(d-M-Y H:i:s");
+            $today = date("d-M-Y H:i:s");
             echo $today;
             
         ?>
