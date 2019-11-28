@@ -9,4 +9,4 @@ done
 #For 8MP Pi camera v2
 #raspistill -mm backlit -drc high -o $DATE.jpg -w 1640 -h 1232 &
 
-# DATE=$(date --utc +"%Y%m%d_%H%M%S%FTZ")
+# DATE=$(date --utc +"%Y%m%d_%H%M%S%Z")
