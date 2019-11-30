@@ -1,8 +1,8 @@
 #!/bin/bash
 while :
 do
-  DATE=$(date +"%Y%m%d_%H%M%S")
-  raspistill -o /home/aspi/AllSkyData/$DATE.jpg &
+  DATE=$(date --utc +"%Y%m%d-%H%M%S%Z")
+  raspistill -o /home/aspi/AllSkyData/$DATE.jpg -mm spot -br 45 &
 sleep 60
 done
 
