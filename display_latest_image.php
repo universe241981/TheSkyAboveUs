@@ -12,7 +12,7 @@ $page = $_SERVER['PHP_SELF'];
                                                                  
         <?php
     
-            $today = date("d-M-Y H:i:s");
+            $today = gmdate("d-M-Y H:i:s")." UTC";
             echo $today;
             
         ?>
