@@ -8,17 +8,23 @@ $page = $_SERVER['PHP_SELF'];
 </head>
     <body bgcolor=black>
         <center><font size=8 color=white>The Sky Above Us</font><br><font size=5 color=white>Location = Somewhere On Earth | Owner = W.C.Observatory | </font>
-        <br><font size=5 color=white>
-                                                                 
+        
+        <br><font size=5 color=white>                                                  
         <?php
-    
             $today = gmdate("d-M-Y H:i:s")." UTC";
             echo $today;
-            
-        ?>
-            
+        ?> 
         </font>
-            
+
+        <br><font size=5 color=white>
+        <?php
+            $f = fopen("/sys/class/thermal/thermal_zone0/temp","r");
+            $temp = fgets($f);
+            echo 'SoC Temp. = '.round($temp/1000). '&#8451;</font>';
+            fclose($f);
+        ?>
+        </font>
+                                                                 
         <?php
 
             $files = glob('AllSkyData/*.*');
