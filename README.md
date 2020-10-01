@@ -13,6 +13,6 @@ Meteotux Pi
 -
 The latest Meteotux Pi is the one with file name "meteotux_pi".
 
-The "meteotux_pi_1_3_9" is the bug version of "meteotux_pi". But the advantage of this version is, we can use it under serious light pollution sky.
+The "meteotux_pi_1_3_9" is the bug version of "meteotux_pi". But the advantage of this version is, we can use it under serious light pollution sky. 
 
 The "meteotux_pi_works_with_stretch_kernal_4.9" is the obsoleted version which no longer available on Meteotux Pi website.
