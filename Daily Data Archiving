@@ -1,0 +1,6 @@
+DATETIME="$(date +'%Y%m%d')"
+mkdir -p "/home/aspi/${DATETIME}"
+
+for file in /home/aspi/AllSkyData/${DATETIME}*.jpg; do
+	mv "${file}" "/home/aspi/${DATETIME}/";
+done
